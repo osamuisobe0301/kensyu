@@ -1,16 +1,19 @@
-package process;
+package process.processImpl;
 
 import java.io.BufferedReader;
+
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.List;
 
 import constants.Constants;
+import process.Process;
 import repository.dto.Shain;
 
-public class PostSearch {
-	//ĞˆõƒŠƒXƒg‚ğˆø”‚Åó‚¯æ‚é
-	public static void searchPost(List<Shain> shainList) throws IOException{
+public class PostSearch implements Process {
+	
+	@Override
+	public void execute(List<Shain> shainList) throws IOException {
 		Constants.Message.MESSAGE_SHORIKUBUN04.showMessageBreak();
 		Constants.Message.MESSAGE_SHORIKUBUN05.showMessageBreak();
 		//–ğEID‚ğ“ü—Í‚³‚¹‚ÄŠY“–‚·‚éĞˆõî•ñ‚ğo—Í‚·‚é

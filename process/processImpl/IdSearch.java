@@ -1,20 +1,23 @@
-package process;
+package process.processImpl;
 
 import java.io.BufferedReader;
+
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.List;
 import constants.Constants;
 import repository.dto.Shain;
+import process.Process;
 
 /**
  * 
  * @author t.takagi
  *
  */
-public class IdSearch {
-	//社員リストを引数で受け取る
-	public static void searchId(List<Shain> shainList) throws IOException  {
+public class IdSearch implements Process {
+	
+	@Override
+	public void execute(List<Shain> shainList) throws IOException {
 		Constants.Message.MESSAGE_SHORIKUBUN03.showMessageBreak();
 		//社員IDを入力させて該当する社員情報を出力する
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
