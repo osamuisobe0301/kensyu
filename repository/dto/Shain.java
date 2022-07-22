@@ -1,4 +1,4 @@
-package dto;
+package repository.dto;
 
 import constants.Constants;
 
@@ -39,7 +39,7 @@ public class Shain{
 		Calc();
 		return salary;
 	}
-	//ƒ{[ƒiƒXŒvZƒƒ\ƒbƒh
+	//ï¿½{ï¿½[ï¿½iï¿½Xï¿½vï¿½Zï¿½ï¿½ï¿½\ï¿½bï¿½h
 	public void Calc() {
 		switch(getPostId()) {
 		case "01":
@@ -55,8 +55,8 @@ public class Shain{
 		Constants.Message.MESSAGE_SHAIN04.showMessage();
 		System.out.println(bonus);
 	}
-	//‘Sî•ño—Íƒƒ\ƒbƒh
-	public void OutputInformation() {
+	//ï¿½Sï¿½ï¿½ï¿½oï¿½Íƒï¿½ï¿½\ï¿½bï¿½h
+	public void outputInformation() {
 		getName();
 		getPost();
 		getSalary();

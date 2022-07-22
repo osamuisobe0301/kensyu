@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.List;
 import constants.Constants;
-import dto.Shain;
+import repository.dto.Shain;
 
 /**
  * 
@@ -23,7 +23,7 @@ public class IdSearch {
 			if(Input.equals(shain.getId())){
 				Constants.Message.MESSAGE_LINE01.showMessageBreak();
 				//�Ј������o�͂��郁�\�b�h
-				shain.OutputInformation();
+				shain.outputInformation();
 			}
 		}
 	}

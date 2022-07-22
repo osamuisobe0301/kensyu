@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.List;
 
 import constants.Constants;
-import dto.Shain;
+import repository.dto.Shain;
 
 public class PostSearch {
 	//社員リストを引数で受け取る
@@ -20,7 +20,7 @@ public class PostSearch {
 			if(postId.equals(shain.getPostId())){
 				Constants.Message.MESSAGE_LINE01.showMessageBreak();
 				//社員情報を出力するメソッド
-				shain.OutputInformation();
+				shain.outputInformation();
 			}
 		}
 	}
