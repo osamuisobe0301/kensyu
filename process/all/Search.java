@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.List;
-import constants.Constants;
+import constants.Constants.Message;
 import dto.Factory;
 import dto.Shain;
 import main.controller.EndCheck;
@@ -24,8 +24,9 @@ public class Search {
 			//createメソッドで社員リストを戻す
 			List<Shain> shainList = Factory.create();
 			
-			Constants.Message.MESSAGE_SHORIKUBUN01.showMessageBreak();
-			Constants.Message.MESSAGE_SHORIKUBUN02.showMessageBreak();
+			
+			Message.MESSAGE_SHORIKUBUN01.showMessageBreak();
+			Message.MESSAGE_SHORIKUBUN02.showMessageBreak();
 			
 			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 			String shoriKubun = br.readLine();

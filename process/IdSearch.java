@@ -7,17 +7,22 @@ import java.util.List;
 import constants.Constants;
 import dto.Shain;
 
+/**
+ * 
+ * @author t.takagi
+ *
+ */
 public class IdSearch {
-	//ĞˆõƒŠƒXƒg‚ğˆø”‚Åó‚¯æ‚é
+	//ï¿½Ğˆï¿½ï¿½ï¿½ï¿½Xï¿½gï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Åó‚¯ï¿½ï¿½
 	public static void searchId(List<Shain> shainList) throws IOException  {
 		Constants.Message.MESSAGE_SHORIKUBUN03.showMessageBreak();
-		//ĞˆõID‚ğ“ü—Í‚³‚¹‚ÄŠY“–‚·‚éĞˆõî•ñ‚ğo—Í‚·‚é
+		//ï¿½Ğˆï¿½IDï¿½ï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ï¿½ÄŠYï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ğˆï¿½ï¿½ï¿½ï¿½ï¿½ï¿½oï¿½Í‚ï¿½ï¿½ï¿½
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		String Input = br.readLine();
 		for(Shain shain : shainList){
 			if(Input.equals(shain.getId())){
 				Constants.Message.MESSAGE_LINE01.showMessageBreak();
-				//Ğˆõî•ñ‚ğo—Í‚·‚éƒƒ\ƒbƒh
+				//ï¿½Ğˆï¿½ï¿½ï¿½ï¿½ï¿½ï¿½oï¿½Í‚ï¿½ï¿½éƒï¿½\ï¿½bï¿½h
 				shain.OutputInformation();
 			}
 		}
