@@ -36,11 +36,11 @@ public class Shain{
 	public int getSalary() {
 		Constants.Message.MESSAGE_SHAIN03.showMessage();
 		System.out.println(salary);
-		Calc();
+		calc();
 		return salary;
 	}
-	//�{�[�i�X�v�Z���\�b�h
-	public void Calc() {
+	// ボーナス計算メソッド
+	public void calc() {
 		switch(getPostId()) {
 		case "01":
 			bonus = salary * 2.0;
@@ -55,7 +55,7 @@ public class Shain{
 		Constants.Message.MESSAGE_SHAIN04.showMessage();
 		System.out.println(bonus);
 	}
-	//�S���o�̓��\�b�h
+	// 全情報出力メソッド
 	public void outputInformation() {
 		getName();
 		getPost();

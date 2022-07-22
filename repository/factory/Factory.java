@@ -9,13 +9,13 @@ public class Factory {
 	static List<Shain> ShainList = new ArrayList<>();
 
 	public static void createList() {
-		Shain nakama = new Shain("�ｿｽ�ｿｽ�ｿｽ�ｿｽ", "001", "�ｿｽW�ｿｽ�ｿｽ", "03", 100000);
-		Shain takagi = new Shain("�ｿｽ�ｿｽ�ｿｽ�ｿｽ", "002", "�ｿｽW�ｿｽ�ｿｽ", "03", 100000);
-		Shain nakano = new Shain("�ｿｽ�ｿｽ�ｿｽ�ｿｽ", "003", "�ｿｽW�ｿｽ�ｿｽ", "03", 100000);
-		Shain isobe = new Shain("�ｿｽ�ｿｽ�ｿｽ�ｿｽ", "004", "�ｿｽ�ｿｽC", "02", 50000);
-		Shain shimizu = new Shain("�ｿｽE�ｿｽ�ｿｽ", "005", "�ｿｽ�ｿｽC", "02", 50000);
-		Shain hukusako = new Shain("�ｿｽ�ｿｽ�ｿｽ�ｿｽ", "006", "�ｿｽ�ｿｽ�ｿｽ", "01", 30000);
-		Shain nakamura = new Shain("�ｿｽ�ｿｽ�ｿｽ�ｿｽ", "007", "�ｿｽ�ｿｽ�ｿｽ", "01", 30000);
+		Shain nakama = new Shain("仲間", "001", "係長", "03", 100000);
+		Shain takagi = new Shain("高木", "002", "係長", "03", 100000);
+		Shain nakano = new Shain("中野", "003", "係長", "03", 100000);
+		Shain isobe = new Shain("清水", "004", "主任", "02", 50000);
+		Shain shimizu = new Shain("礒辺", "005", "主任", "02", 50000);
+		Shain hukusako = new Shain("福迫", "006", "一般", "01", 30000);
+		Shain nakamura = new Shain("中村", "007", "一般", "01", 30000);
 
 		ShainList.add(nakama);
 		ShainList.add(takagi);
@@ -29,4 +29,3 @@ public class Factory {
 		return ShainList;
 	}
 }
-
