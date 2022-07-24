@@ -6,7 +6,7 @@ public class Output {
 	
 	public void showShain(List<ShainData> shainList,int id) {
 		
-		if(checkInputId(id)) {
+		if(!checkInputId(id)) {
 		// if(1 != id && 2 != id && 3 != id && 4 != id && 9 != id) {
 			System.out.println("入力エラーです。1～4の数字を入力してください。");
 		}
@@ -42,8 +42,7 @@ public class Output {
 	// 以下のメソッドにしてしまえば、役職が増えたときに、EnumのIｄを増やすだけで良くなる
 	// (if文の条件を増やさなくてよい)
 	private boolean checkInputId(int inputId) {
-		List<Yakushoku> yakushokuList = Arrays.asList(Yakushoku.values());
-		for(Yakushoku y : yakushokuList) {
+		for(Yakushoku y : Yakushoku.values()) {
 			if(y.getId() == inputId) {
 				return true;
 			}
