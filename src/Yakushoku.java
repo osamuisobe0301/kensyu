@@ -8,7 +8,7 @@ public enum Yakushoku {
 	
 	private int id;
 	private String yakushokuName;
-	private Boolean bonus;
+	private boolean bonus;
 	
 	private Yakushoku(int id,String yakushokuName,Boolean bonus) {
 		this.id = id;
@@ -23,8 +23,9 @@ public enum Yakushoku {
 	public String getYakushokuName() {
 		return this.yakushokuName;
 	}
-	
-	public Boolean getBonus() {
+	// Booleanはラッパークラスでなくても良い
+	// またbooleanの場合はメソッド名はisやチェックの方が良い
+	public boolean isBonus() {
 		return this.bonus;
 	}
 	
