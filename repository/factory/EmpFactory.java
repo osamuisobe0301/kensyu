@@ -1,13 +1,16 @@
 package repository.factory;
 
-
 import java.util.ArrayList;
 import java.util.List;
-
 import repository.dto.Shain;
-public class Factory {
+/**
+ * 社員リストを作成するクラス
+ */
+public class EmpFactory {
 	static List<Shain> ShainList = new ArrayList<>();
-
+	/**
+	 * 社員リストを作成するメソッド
+	 */
 	public static void createList() {
 		Shain nakama = new Shain("仲間", "001", "係長", "03", 100000);
 		Shain takagi = new Shain("高木", "002", "係長", "03", 100000);
@@ -25,6 +28,10 @@ public class Factory {
 		ShainList.add(hukusako);
 		ShainList.add(nakamura);
 	}
+	/**
+	 * 社員リストを戻り値で戻すメソッド
+	 * @return 社員リストを戻す
+	 */
 	public static List<Shain> createListReturn(){
 		return ShainList;
 	}
