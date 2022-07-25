@@ -1,5 +1,7 @@
 eclipse.preferences.version=1
+encoding//Factory/EmpFactory.java=UTF-8
 encoding//constants/Constants.java=sjis
+<<<<<<< HEAD
 encoding//controller/Controller.java=sjis
 encoding//repository/factory/EmpFactory.java=UTF-8
 encoding//search/parts/AllOutput.java=sjis
@@ -7,4 +9,12 @@ encoding//search/parts/EndCheck.java=sjis
 encoding//search/parts/IdSearch.java=UTF-8
 encoding//search/parts/PostSearch.java=sjis
 encoding//search/summarize/SearchImpl.java=sjis
+=======
+encoding//controller/SerchEmpInfoController.java=sjis
+encoding//process/EndCheck.java=sjis
+encoding//process/all/SearchEmpInfoApp.java=sjis
+encoding//process/processImpl/AllOutput.java=sjis
+encoding//process/processImpl/IdSearch.java=UTF-8
+encoding//process/processImpl/PostSearch.java=sjis
+>>>>>>> branch 'dev_takagi_shain' of https://github.com/osamuisobe0301/kensyu.git
 encoding/<project>=UTF-8
