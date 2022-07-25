@@ -1,10 +1,10 @@
 eclipse.preferences.version=1
 encoding//constants/Constants.java=sjis
-encoding//main/controller/Controller.java=sjis
-encoding//process/AllOutput.java=sjis
-encoding//process/EndCheck.java=sjis
-encoding//process/IdSearch.java=UTF-8
-encoding//process/PostSearch.java=sjis
-encoding//process/all/Search.java=sjis
-encoding//repository/factory/Factory.java=UTF-8
+encoding//controller/Controller.java=sjis
+encoding//repository/factory/EmpFactory.java=UTF-8
+encoding//search/parts/AllOutput.java=sjis
+encoding//search/parts/EndCheck.java=sjis
+encoding//search/parts/IdSearch.java=UTF-8
+encoding//search/parts/PostSearch.java=sjis
+encoding//search/summarize/SearchImpl.java=sjis
 encoding/<project>=UTF-8

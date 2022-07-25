@@ -2,6 +2,9 @@ package repository.dto;
 
 import constants.Constants;
 
+/**
+ * 社員の論理データクラス
+ */
 public class Shain{
 	private String Id;
 	private String name;
@@ -9,7 +12,9 @@ public class Shain{
 	private String postName;
 	private int salary;
 	private double bonus = 0;
-	
+	/**
+	 * 社員論理データクラスのコンストラクタ
+	 */
 	public Shain(String name, String id, String postName, String postId, int salary) {
 		Id = id;
 		this.name = name;
@@ -17,29 +22,63 @@ public class Shain{
 		this.postName = postName;
 		this.salary = salary;
 	}
+	/**
+	 * 社員IDのゲッターメソッド
+	 */
 	public String getId() {
 		return Id;
 	}
+	/**
+	 * 社員名のゲッターメソッド
+	 */
 	public String getName() {
-		Constants.Message.MESSAGE_SHAIN01.showMessage();
-		System.out.println(name);
 		return name;
 	}
+	/**
+	 * 役職IDのゲッターメソッド
+	 */
 	public String getPostId() {
 		return postId;
 	}
+	/**
+	 * 役職名のゲッターメソッド
+	 */
 	public String getPost() {
-		Constants.Message.MESSAGE_SHAIN02.showMessage();
-		System.out.println(postName);
 		return postName;
 	}
+	/**
+	 *　給与のゲッターメソッド
+	 */
 	public int getSalary() {
+		Constants.Message.MESSAGE_SHAIN03.showMessage();
+		return salary;
+	}
+	/**
+	 * 社員名の出力メソッド
+	 */
+	public void getNameOutput() {
+		Constants.Message.MESSAGE_SHAIN01.showMessage();
+		System.out.println(name);
+	}
+	/**
+	 * 役職名の出力メソッド
+	 */
+	public void getPostOutput() {
+		Constants.Message.MESSAGE_SHAIN02.showMessage();
+		System.out.println(postName);
+	}
+	/**
+	 * 社員IDの出力メソッド
+	 */
+	public void getSalaryOutput() {
 		Constants.Message.MESSAGE_SHAIN03.showMessage();
 		System.out.println(salary);
 		calc();
-		return salary;
 	}
-	// ボーナス計算メソッド
+
+	/**
+	 * ボーナスの計算と出力メソッド
+	 */
 	public void calc() {
 		switch(getPostId()) {
 		case "01":
@@ -55,11 +94,13 @@ public class Shain{
 		Constants.Message.MESSAGE_SHAIN04.showMessage();
 		System.out.println(bonus);
 	}
-	// 全情報出力メソッド
+	/**
+	 * まとめて社員情報を出力するメソッド
+	 */
 	public void outputInformation() {
-		getName();
-		getPost();
-		getSalary();
+		getNameOutput();
+		getPostOutput();
+		getSalaryOutput();
 	}
 	
 }

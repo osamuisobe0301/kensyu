@@ -1,4 +1,4 @@
-package process;
+package search.parts;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -11,7 +11,7 @@ public class EndCheck{
 		Constants.Message.MESSAGE_END01.showMessageBreak();
 		Constants.Message.MESSAGE_END02.showMessageBreak();
 		
-		//end‚Æ“ü—Í‚·‚ê‚Îfalse‚ğ•Ô‚µI—¹‚·‚é
+		//endï¿½Æ“ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ï¿½falseï¿½ï¿½Ô‚ï¿½ï¿½Iï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		String check = br.readLine();
 		if(check.equals("end")) {
