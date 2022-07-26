@@ -1,9 +1,9 @@
 package search.parts;
 
-import constants.Constants;
+import constants.Constants.Message;
 import repository.dto.Shain;
 
-public class SearchUtils {
+public class SearchAppUtils {
 
 	/**
 	 * ボーナスの計算と出力メソッド
@@ -20,7 +20,7 @@ public class SearchUtils {
 			shain.setBonus(shain.getSalary() * 3.0);
 			break;
 		}
-		Constants.Message.MESSAGE_SHAIN04.showMessage();
+		Message.MESSAGE_SHAIN04.showMessage();
 		System.out.println(shain.getBonus());
 	}
 }
