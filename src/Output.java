@@ -1,23 +1,35 @@
 import java.util.List;
 
 public class Output {
-	
-	public static void showShain(List<ShainData> shainList,int id) {
-		if(1 != id && 2 != id && 3 != id && 4 != id && 9 != id) {
-			System.out.println("å…¥åŠ›ã‚¨ãƒ©ãƒ¼ã§ã™ã€‚1ï½4ã®æ•°å­—ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„ã€‚");
-		}
-		for (ShainData shain : shainList) {
-			if (shain.getYakushokuId() == id) {
-				List<SalaryData> salaryList = shain.getSalaryList();
-				System.out.println("ç¤¾å“¡åï¼š" + shain.getName() + "ã€å½¹è·ï¼š" + shain.getYakushokuName());
-				for (SalaryData salary : salaryList) {
-					System.out.println("çµ¦æ–™ï¼š" + salary.getOneSalary() + "ã€" + salary.getTwoSalary() + "ã€"
-							+ salary.getThreeSalary());
-				}
-				System.out.println("ãƒœãƒ¼ãƒŠã‚¹ï¼š" + shain.getBonus());
-				System.out.println("------------------------------");
-			}
-		}
-	}
 
+    String itemData;
+    Boolean chilledFlag = false;
+    int i;
+    int sumPrice;
+
+    public void show(List<DenpyoData> denpyoList){
+        for(DenpyoData denpyo : denpyoList){
+            List<ItemData> itemList = denpyo.getItemList();
+            System.out.println("ŒÚ‹q–¼F" + denpyo.getName());
+            
+            String[] itemStrings = new String[3];
+            i = 0;
+            sumPrice = 0;
+            for(ItemData item : itemList){
+                itemStrings[i] = item.getName() + "/" + item.getPrice() +"‰~";
+                sumPrice += item.getPrice();
+                if(item.getChilledFlag()){
+                    this.chilledFlag = true;
+                }
+                i++;
+            }
+            this.itemData = String.join("A",itemStrings[0],itemStrings[1],itemStrings[2]);
+            System.out.println("w“ü¤•iF" + itemData);
+            System.out.println("‡Œv‹àŠzF" + sumPrice);
+            if(this.chilledFlag){
+                System.out.println("!—v—â‘ ‚Ì¤•i‚ªŠÜ‚Ü‚ê‚Ä‚¢‚Ü‚·");
+            }
+            System.out.println("========================");
+        }
+    }
 }
