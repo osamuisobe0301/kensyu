@@ -1,27 +1,52 @@
 package dao;
 
+/**
+ * @author t.takagi
+ */
+
+/**
+ *@–ğEî•ñ‚ÌŒ^
+ */
 public class Post {
+
+	//ƒtƒB[ƒ‹ƒh
 	String postName;
 	String postId;
 	int salary;
+
+	/**
+	 *@–ğEî•ñ‚Ì‰Šú‰»
+	 * @param postId –ğEID, postName@–ğE–¼, salary@‹‹—¿
+	 */
 	public Post(String postId, String postName, int salary) {
 		super();
 		this.postId = postId;
 		this.postName = postName;
 		this.salary = salary;
 	}
-	
-	/**
-	 * –ğEî•ño—Íƒƒ\ƒbƒh
-	 * @return –ğE‚É•R‚Ã‚¢‚½î•ñ
-	 */
-	@Override
-	public String toString() {
-		System.out.println("–ğE:" + this.postName + "\n–ğEID:" + this.postId + "\n‹‹—¿" + this.salary + "\n");
-		return super.toString();
+
+	public String getPostName() {
+		return postName;
 	}
-	
-	
-	
+
+	public String getPostId() {
+		return postId;
+	}
+
+	public int getSalary() {
+		return salary;
+	}
+
+	public void setPostName(String postName) {
+		this.postName = postName;
+	}
+
+	public void setPostId(String postId) {
+		this.postId = postId;
+	}
+
+	public void setSalary(int salary) {
+		this.salary = salary;
+	}
 
 }

@@ -1,12 +1,18 @@
 package application;
 
+
+import java.util.ArrayList;
 import java.util.List;
 
 import dao.Post;
-import dto.character.Shain;
-import factory.PostFactory;
-import factory.ShainFactory;
+import dao.Shain;
+import dto.shain.ShainDto;
+import table.PostTable;
+import table.ShainTable;
 
+/**
+ * @author t.takagi
+ */
 
 
 /**
@@ -19,25 +25,61 @@ public class application {
 	 */
 	public static void main(String[] args) {
 
-		// ファクトリーのインスタンスを生成
-		ShainFactory studentFactory = new ShainFactory();
+		//社員の型を生成
+		List<ShainDto> shainDtoList = new ArrayList<ShainDto>();
+		
+		//社員情報を生成
+		ShainTable shainTable = new ShainTable();
+		
+		//役職に紐づく情報を生成
+		PostTable postTable = new PostTable();
 
-		//生徒リストをクリエイトメソッドで返却
-		List<Shain> shainList = ShainFactory.create();
+		
+		//社員情報のリストを返却
+		List<Shain> shainList = shainTable.ReturnShainList();
+		
+		//役職に紐づく情報のリストを生成
+		List<Post> postList = postTable.ReturnPostList();
 
-		//社員情報全出力
-		for(Shain s : shainList) {
-
-			//社員の役職IDをキーにして紐づいた役職の情報を取得
-			Post post = PostFactory.create(s.getPostId());
-
-			//社員dtoの情報出力
-			s.toString();
-
-			//役職daoの情報出力
-			System.out.println(s);
-			post.toString();
-		}
+		//２つのリストの役職IDがそれぞれ合致したら社員を生成して社員リストに入れる
+		 for(Shain shain : shainList){
+	            for(Post post : postList){
+	                if(shain.getPostId().equals(post.getPostId())){
+	                	
+	                	
+	                	//社員情報を社員にセットする
+	                	ShainDto dto = new ShainDto();
+	                	dto.setId(shain.getId());
+	                	dto.setName(shain.getName());
+	                	dto.setPostId(post.getPostId());
+	                	dto.setPostName(post.getPostName());
+	                	dto.setSalary(post.getSalary());
+	                	
+	                	//社員リストに入れる
+	                	shainDtoList.add(dto);
+	                    break;
+	                }
+	            }
+	        }
+		 
+		 //社員リストを全出力
+		 shainDtoList.stream()
+		 .forEach(System.out::println);
+		
+		
+		
+	
+//		Service service = new Service();
+//		sdervice.connect(shainList, postList);
+//		
+//		
+//		
+//		List<Dto> dtoList = new ArrayList<>();
+		
+		
+		
+		
+		
 	}
 
 }
