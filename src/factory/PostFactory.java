@@ -16,7 +16,7 @@ public class PostFactory {
 	 * @param PostId　役職ID
 	 * @return　Post　役職
 	 */
-	public static Post create(String PostId) {
+	public static Post create(String postId) {
 		
 		//役職マップ生成
 		Map<String, Post> postMap = new HashMap<>();
@@ -27,6 +27,6 @@ public class PostFactory {
 		postMap.put("3", new Post("3", "一般", 260000));
 		
 		//役職IDキーで受け取って役職daoを返す
-		return postMap.get(PostId);
+		return postMap.get(postId);
 	}
 }

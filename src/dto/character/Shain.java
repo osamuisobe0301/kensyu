@@ -29,14 +29,9 @@ public class Shain {
 	}
 	
 	
-	/**
-	 * 社員情報出力メソッド
-	 * @return 社員情報
-	 */
 	@Override
 	public String toString() {
-		System.out.println("社員ID:" + this.id + "\n社員名:" + this.name);
-		return super.toString();
+		return "Shain [id=" + id + ", name=" + name + ", postId=" + postId + "]";
 	}
 	
 	
