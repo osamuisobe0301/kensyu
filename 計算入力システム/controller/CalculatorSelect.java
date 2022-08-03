@@ -17,8 +17,6 @@ public class CalculatorSelect {
 
 	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-	ICalc all;
-
 	/**
 	 * 計算方法を選択するメソッド
 	 * 
@@ -65,10 +63,12 @@ public class CalculatorSelect {
 				else {
 					Message.Message_NUMBER_ONE.show();
 				}
-
+				
 				String num1 = br.readLine();
-				double numOne = Double.parseDouble(num1);
-
+				String num2 = br.readLine();
+				
+				Message.Message_03.show((Double.parseDouble(num1)),(Double.parseDouble(num2)));
+				
 				// 2つ目の値を入力する
 
 				// 5が選択された場合
@@ -86,14 +86,12 @@ public class CalculatorSelect {
 					Message.Message_NUMBER_TWO.show();
 				}
 
-				String num2 = br.readLine();
-				double numTwo = Double.parseDouble(num2);
 
-				// CalcFactryをインスタンス化し、calcNumによって
-				// 処理を変える
+				// CalcFactryをインスタンス化し、選択された
+				// キーによって処理を変える
 				CalcFactry fac = new CalcFactry();
-				all = fac.calcMapCreate(calcNum);
-				Message.Message_CALC.show(all.calc(numOne, numTwo));
+				ICalc calcFunction = fac.calcMapCreate(calcNum);
+//				Message.Message_CALC.show(calcFunction.calc(numOne, numTwo));
 
 			} catch (NumberFormatException e) {
 				Message.Message_ERROR.show();

@@ -5,13 +5,13 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 import constants.Constants.Message;
-import dto.AdditionCalc;
-import dto.BonusCalc;
 import dto.ICalc;
-import dto.DivisionCalc;
-import dto.MultiplicationCalc;
-import dto.SubtractionCalc;
-import dto.TaxCalc;
+import service.AdditionCalcimpl;
+import service.BonusCalcimpl;
+import service.DivisionCalcimpl;
+import service.MultiplicationCalcimpl;
+import service.SubtractionCalcimpl;
+import service.TaxCalcimpl;
 
 /**
  * 計算方法を決めるクラス
@@ -68,37 +68,37 @@ public class CalculatorSelect {
 			
 			//足し算
 			case 1:
-				ICalc add = new AdditionCalc(numOne, numTwo);
+				ICalc add = new AdditionCalcimpl(numOne, numTwo);
 				add.calc();
 				break;
 				
 			//引き算	
 			case 2:
-				ICalc sub = new SubtractionCalc(numOne, numTwo);
+				ICalc sub = new SubtractionCalcimpl(numOne, numTwo);
 				sub.calc();
 				break;
 				
 			//掛け算	
 			case 3:
-				ICalc mul = new MultiplicationCalc(numOne, numTwo);
+				ICalc mul = new MultiplicationCalcimpl(numOne, numTwo);
 				mul.calc();
 				break;
 				
 			//割り算	
 			case 4:
-				ICalc div = new DivisionCalc(numOne, numTwo);
+				ICalc div = new DivisionCalcimpl(numOne, numTwo);
 				div.calc();
 				break;
 				
 			//税込み計算	
 			case 5:
-				ICalc tax = new TaxCalc(numOne, numTwo);
+				ICalc tax = new TaxCalcimpl(numOne, numTwo);
 				tax.calc();
 				break;
 				
 			//賞与計算
 			case 6:
-				ICalc bonus = new BonusCalc(numOne, numTwo);
+				ICalc bonus = new BonusCalcimpl(numOne, numTwo);
 				bonus.calc();
 				break;
 				

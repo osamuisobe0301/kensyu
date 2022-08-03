@@ -26,8 +26,8 @@ public class Constants {
 		LINE("---------------------------------------------"),
 		Message_CALC("計算結果は「{0}」です。"),
 		Message_END("処理を終了します。"),
-		Message_ERROR("正しい数を入力してください。");
-		// Message_03("税抜きの値を入力してください。\n{0}\n基本給を入力してください。{1}");
+		Message_ERROR("正しい数を入力してください。"),
+		Message_03("税抜きの値を入力してください。\n{0}\n基本給を入力してください。{1}");
 		@Getter
 		private String message;
 
