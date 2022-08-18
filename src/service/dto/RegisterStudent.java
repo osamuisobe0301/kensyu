@@ -42,19 +42,9 @@ public class RegisterStudent implements Service{
 		
 		//¶“kID“ü—Í
 		Message.MESSAGE_INPUT00.showMessage();
-		int figureStudentId;
-		try {
+
 		String studentId = Util.br.readLine();
-		figureStudentId = Integer.parseInt(studentId);
-		if(String.valueOf(figureStudentId).length() > 4) {
-			throw new DigitsNumber();
-		}
-		}catch(DigitsNumber e){
-			Message.MESSAGE_INPUT01.showMessage();
-		}
-		
-		
-		
+		int figureStudentId = Integer.parseInt(studentId);
 		
 		
 		//¶“k–¼“ü—Í
@@ -88,7 +78,7 @@ public class RegisterStudent implements Service{
 	}
 		return List;
 	}
-
+}
 
 
 
