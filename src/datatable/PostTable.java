@@ -23,10 +23,9 @@ public class PostTable{
         PostEntity shacho = new PostEntity("01", "Ğ’·");
         PostEntity bucho = new PostEntity("02", "•”’·");
         PostEntity kakaricho = new PostEntity("03", "ŒW’·");
-        PostEntity shunin = new PostEntity("04", "å”C");
         
         //‰Šú‰»‚µ‚½–ğEî•ñ‚ğ–ğEƒŠƒXƒg‚Éİ’è‚·‚é
-        postList = Arrays.asList(shacho, bucho, kakaricho, shunin);    
+        postList = Arrays.asList(shacho, bucho, kakaricho);    
         
     }
     

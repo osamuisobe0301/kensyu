@@ -1,5 +1,7 @@
 package constants;
 
+
+
 /**
  * @author t.takagi
  * 定数を設定する
@@ -13,8 +15,8 @@ public class Constants {
 		
 		//進行メッセージの定数を設定する
 		MENU_NUMBER_INPUT("メニュー番号を入力してください\n 1.会社IDで検索する　2.役職IDで検索する　3.社員情報を全出力する"),
-		COMPANY_ID_INPUT("会社IDを入力してください"),
-		POST_ID_INPUT("役職IDを入力してください");
+		COMPANY_ID_INPUT("会社IDを入力してください\n01.ソニー　02.東芝 03.パナソニック"),
+		POST_ID_INPUT("役職IDを入力してください\n01.社長　02.部長 03.係長 ");
 		
 		private String message;
 		

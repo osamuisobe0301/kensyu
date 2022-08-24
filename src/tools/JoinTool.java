@@ -29,7 +29,7 @@ public class JoinTool{
                 for(PostEntity postTable : postTableList){
                 	
                 	//‰ïĞID‚Æ–ğEIDˆê’v‚·‚ê‚ÎŒ‹‡‚·‚é
-                    if(companyTable.getCompanyId().equals(shainTable.getCompanyId()) || postTable.getPostId().equals(shainTable.getPostId())) {
+                    if(companyTable.getCompanyId().equals(shainTable.getCompanyId()) && postTable.getPostId().equals(shainTable.getPostId())) {
                     	
                     	//ˆê’v‚µ‚½‚çĞˆõî•ñ‚ğ¶¬‚·‚é
                         ShainDto shainDto = new ShainDto(shainTable.getShainName(), shainTable.getSalary(), companyTable.getCompanyName(), companyTable.getCompanyId(), postTable.getPostName(), postTable.getPostId());
