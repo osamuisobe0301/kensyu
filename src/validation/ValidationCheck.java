@@ -1,5 +1,8 @@
 package validation;
 
+
+
+import constants.Constants.MESSAGE.ValidationMessage;
 import exception.InputException;
 
 /**
@@ -14,7 +17,7 @@ public class ValidationCheck {
 	 */
 	public void checkMenuNumber(String menuNumer) throws InputException {
 		if(!(menuNumer.equals("1")) && !(menuNumer.equals("2")) && !(menuNumer.equals("3"))) {
-			throw new InputException("³‚µ‚¢ƒƒjƒ…[”Ô†‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢\n");
+			throw new InputException(ValidationMessage.VALIDATION_MENU_NUMBER.getValidationMessage());
 		}
 	}
 	
@@ -24,7 +27,7 @@ public class ValidationCheck {
 	 */
 	public void checkCompanyId(String inputCompanyId) throws InputException{
 		if(!(inputCompanyId.equals("01")) && !(inputCompanyId.equals("02")) && !(inputCompanyId.equals("03"))) {
-			throw new InputException("³‚µ‚¢‰ïĞID‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢\n");
+			throw new InputException(ValidationMessage.VALIDATION_MENU_NUMBER.getValidationMessage());
 		}
 	}
 	
@@ -34,7 +37,7 @@ public class ValidationCheck {
 	 */
 	public void checkPostId(String inputPostId) throws InputException{
 		if(!(inputPostId.equals("01")) && !(inputPostId.equals("02")) && !(inputPostId.equals("03"))) {
-			throw new InputException("³‚µ‚¢–ğEID‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢\n");
+			throw new InputException(ValidationMessage.VALIDATION_POST_ID.getValidationMessage());
 		}
 	}
 	
