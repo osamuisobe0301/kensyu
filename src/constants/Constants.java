@@ -11,7 +11,7 @@ public class Constants {
 	/**
 	 * システムの進行メッセージを定義する
 	 */
-	public enum MESSAGE{
+	public enum ProgressionMessage{
 
 		//進行メッセージの定数を設定する
 		MENU_NUMBER_INPUT("メニュー番号を入力してください\n 1.会社IDで検索する　2.役職IDで検索する　3.社員情報を全出力する"),
@@ -24,7 +24,7 @@ public class Constants {
 		 * 進行メッセージを初期化する
 		 * @param message
 		 */
-		private MESSAGE(String message){
+		private ProgressionMessage(String message){
 			this.message = message;
 		}
 

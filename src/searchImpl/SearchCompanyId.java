@@ -9,7 +9,7 @@ import dto.ShainDto;
 import exception.InputException;
 import search.Search;
 import validation.ValidationCheck;
-import constants.Constants.MESSAGE;
+import constants.Constants.ProgressionMessage;
 
 
 
@@ -33,7 +33,7 @@ public class SearchCompanyId implements Search{
 
 
 			// ‰ïĞ‚h‚c“ü—Í‚Ìw¦•¶‚ğ‰æ–Ê‚Éo—Í‚·‚é
-			System.out.println(MESSAGE.COMPANY_ID_INPUT.getMessage());
+			System.out.println(ProgressionMessage.COMPANY_ID_INPUT.getMessage());
 
 			//o—Í‚µ‚½‚¢‰ïĞID‚ğ“ü—Í‚·‚é
 			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

@@ -2,7 +2,7 @@ package validation;
 
 
 
-import constants.Constants.MESSAGE.ValidationMessage;
+import constants.Constants.ProgressionMessage.ValidationMessage;
 import exception.InputException;
 
 /**

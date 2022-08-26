@@ -3,7 +3,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-import constants.Constants.MESSAGE;
+import constants.Constants.ProgressionMessage;
 import exception.InputException;
 import validation.ValidationCheck;
 
@@ -30,7 +30,7 @@ public class InputMenuTool{
 		while(check) {
 			
 			//メニュー番号入力の指示を画面に出力する
-			System.out.println(MESSAGE.MENU_NUMBER_INPUT.getMessage());
+			System.out.println(ProgressionMessage.MENU_NUMBER_INPUT.getMessage());
 
 			//検索したメニュー番号を入力する
 			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

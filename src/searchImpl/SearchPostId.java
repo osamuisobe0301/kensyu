@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.List;
 
-import constants.Constants.MESSAGE;
+import constants.Constants.ProgressionMessage;
 import dto.ShainDto;
 import exception.InputException;
 import search.Search;
@@ -31,7 +31,7 @@ public class SearchPostId implements Search{
 		while(check) {
 
 			//@–ğE‚h‚c“ü—Í‚Ìw¦•¶‚ğ‰æ–Ê‚Éo—Í‚·‚é
-			System.out.println(MESSAGE.POST_ID_INPUT.getMessage());
+			System.out.println(ProgressionMessage.POST_ID_INPUT.getMessage());
 
 			//o—Í‚µ‚½–ğEID‚ğ“ü—Í‚·‚é
 			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
